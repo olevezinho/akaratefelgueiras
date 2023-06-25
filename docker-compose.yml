@@ -1,8 +1,8 @@
 version: '3.7'
 
 services:
-   curriculumvitae:
-    image: curriculumvitae
+   akaratefelgueiras:
+    image: akaratefelgueiras
     build:
       context: .
     environment:
