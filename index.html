@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Assoc. Karaté Felgueiras</title>
+    <base href="/AKarateFelgueiras/" />
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <link href="_content/MudBlazor/MudBlazor.min.css" rel="stylesheet" />
+
+    <link rel="icon" type="image/png" href="favicon-akf.png" />
+</head>
+
+<body>
+    <div id="app">
+        <div class="progress">
+            <div class="progress-bar progress-bar-striped bg-danger" role="progressbar" aria-valuenow="100"
+                aria-valuemin="0" aria-valuemax="100" style="width: var(--blazor-load-percentage, 0%)">
+                <div class="loading-text"></div>
+            </div>
+        </div>
+        <div class="loading-progress-text"></div>
+
+        <img class="loading-progress" src="favicon-akf.png" />
+    </div>
+
+    <div id="blazor-error-ui">
+        <environment include="Development">
+            An unhandled exception has occurred. See browser dev tools for details.
+        </environment>
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.webassembly.js"></script>
+    <script src="_content/MudBlazor/MudBlazor.min.js"></script>
+</body>
+
+</html>
