@@ -9,17 +9,17 @@ h1:focus {
 }
 
 a, .btn-link {
-    color: #089288;
+    color: #e20014;
 }
 
 .btn-primary {
     color: #fff;
-    background-color: #089288;
-    border-color: #089288;
+    background-color: #e20014;
+    border-color: #e20014;
 }
 
 .btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
-  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #089288;
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #e20014;
 }
 
 .content {
@@ -75,20 +75,6 @@ a, .btn-link {
     margin: 20vh auto 1rem auto;
 }
 
-    .loading-progress circle {
-        fill: none;
-        stroke: #e0e0e0;
-        stroke-width: 0.6rem;
-        transform-origin: 50% 50%;
-        transform: rotate(-90deg);
-    }
-
-        .loading-progress circle:last-child {
-            stroke: #089288;
-            stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-            transition: stroke-dasharray 0.05s ease-in-out;
-        }
-
 .loading-progress-text {
     position: absolute;
     text-align: center;
@@ -96,6 +82,6 @@ a, .btn-link {
     inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
 }
 
-    .loading-progress-text:after {
+    .loading-text:after {
         content: var(--blazor-load-percentage-text, "Loading");
     }
