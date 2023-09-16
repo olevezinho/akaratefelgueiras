@@ -477,5 +477,3 @@ $RECYCLE.BIN/
 *.lnk
 
 # Static analysis files
-static-analysis
-ndepend
