@@ -478,3 +478,4 @@ $RECYCLE.BIN/
 
 # Static analysis files
 static-analysis
+ndepend

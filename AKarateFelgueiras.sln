@@ -3,7 +3,35 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33712.159
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AKarateFelgueiras", "AKarateFelgueiras.csproj", "{55C27BE8-E668-4891-825E-86287B09EEEE}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ndepend", "ndepend", "{5DDAB9D2-B2B1-4BB3-BD91-9631D968D7A1}"
+	ProjectSection(SolutionItems) = preProject
+		ndepend\AKarateFelgueiras.ndproj = ndepend\AKarateFelgueiras.ndproj
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{1B842B7B-4E6B-4F26-813B-3BB2105FB1C4}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "files", "files", "{D424F96D-4A47-4AD9-A09C-8812D2162E26}"
+	ProjectSection(SolutionItems) = preProject
+		docker-compose.yml = docker-compose.yml
+		Dockerfile = Dockerfile
+		README.md = README.md
+		nginx.conf = nginx.conf
+		LICENSE.md = LICENSE.md
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "github", "github", "{2DA89B4C-678B-4FF3-AB77-D341A3011DBB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "workflows", "workflows", "{78CA1AB8-0C5C-415C-A8FB-B52E5968BBFA}"
+	ProjectSection(SolutionItems) = preProject
+		.github\workflows\main.yml = .github\workflows\main.yml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{C5321E72-D498-441B-8429-081EE7DA3CB5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKarateFelgueiras", "src\AKarateFelgueiras\AKarateFelgueiras.csproj", "{80EE89BF-44DA-48C1-BE22-BED0C1472A6B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AKarateFelgueiras.UnitTests", "test\AKarateFelgueiras.UnitTests\AKarateFelgueiras.UnitTests.csproj", "{8CB43ED3-CFCB-41F6-A8C7-4A3756F50F3A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,9 +43,24 @@ Global
 		{55C27BE8-E668-4891-825E-86287B09EEEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{55C27BE8-E668-4891-825E-86287B09EEEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{55C27BE8-E668-4891-825E-86287B09EEEE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80EE89BF-44DA-48C1-BE22-BED0C1472A6B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80EE89BF-44DA-48C1-BE22-BED0C1472A6B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80EE89BF-44DA-48C1-BE22-BED0C1472A6B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80EE89BF-44DA-48C1-BE22-BED0C1472A6B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8CB43ED3-CFCB-41F6-A8C7-4A3756F50F3A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8CB43ED3-CFCB-41F6-A8C7-4A3756F50F3A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8CB43ED3-CFCB-41F6-A8C7-4A3756F50F3A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8CB43ED3-CFCB-41F6-A8C7-4A3756F50F3A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{5DDAB9D2-B2B1-4BB3-BD91-9631D968D7A1} = {D424F96D-4A47-4AD9-A09C-8812D2162E26}
+		{2DA89B4C-678B-4FF3-AB77-D341A3011DBB} = {D424F96D-4A47-4AD9-A09C-8812D2162E26}
+		{78CA1AB8-0C5C-415C-A8FB-B52E5968BBFA} = {2DA89B4C-678B-4FF3-AB77-D341A3011DBB}
+		{80EE89BF-44DA-48C1-BE22-BED0C1472A6B} = {C5321E72-D498-441B-8429-081EE7DA3CB5}
+		{8CB43ED3-CFCB-41F6-A8C7-4A3756F50F3A} = {1B842B7B-4E6B-4F26-813B-3BB2105FB1C4}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0545770D-5697-43D3-819F-74B6CCE3F396}
