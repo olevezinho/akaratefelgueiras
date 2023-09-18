@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <NDepend AppName="AKarateFelgueiras" Platform="DotNet" FileWrittenByProductVersion="2023.1.1.9675">
-  <OutputDir KeepXmlFiles="False">./NDependOut2</OutputDir>
+  <OutputDir KeepXmlFiles="False">./NDependOut1</OutputDir>
   <IDEFiles>
     <IDEFile FilePath="./AKarateFelgueiras.sln" Filters="-filter" Configuration="DEBUG|AnyCPU">
       <RootDirResolvingInfo Enabled="False" Hints="Debug|bin|.bin|b|AnyCPU|x64|x86|v*.*|net*" TimeOut="10">
         <RootDir>.</RootDir>
       </RootDirResolvingInfo>
     </IDEFile>
-    <IDEFile FilePath="./src/AKarateFelgueiras/AKarateFelgueiras.csproj" Filters="-test" Configuration="DEBUG|AnyCPU">
+    <IDEFile FilePath="../src/AKarateFelgueiras/AKarateFelgueiras.csproj" Filters="-test" Configuration="DEBUG|AnyCPU">
       <RootDirResolvingInfo Enabled="False" Hints="Debug|bin|.bin|b|AnyCPU|x64|x86|v*.*|net*" TimeOut="10">
         <RootDir>.</RootDir>
       </RootDirResolvingInfo>
     </IDEFile>
-    <IDEFile FilePath="./AKarateFelgueiras.sln" Filters="-test" Configuration="DEBUG|AnyCPU">
+    <IDEFile FilePath="../AKarateFelgueiras.sln" Filters="-test" Configuration="DEBUG|AnyCPU">
       <RootDirResolvingInfo Enabled="False" Hints="Debug|bin|.bin|b|AnyCPU|x64|x86|v*.*|net*" TimeOut="10">
         <RootDir>.</RootDir>
       </RootDirResolvingInfo>
