@@ -7,7 +7,7 @@
   "linkerEnabled": true,
   "resources": {
     "assembly": {
-      "AKarateFelgueiras.dll": "sha256-sK6O9ZVVZefLWUkfLt3JtmxwXUewDUVUsBTdGUhh0gw=",
+      "AKarateFelgueiras.dll": "sha256-T+O2EHbg+1l9uvFI1iHkgd18SJykYBO\/9Ca1A6Eqcqc=",
       "Microsoft.AspNetCore.Components.dll": "sha256-g4C7zTyV1NFOZSp3iwDt5getyDL13JpERLTMB1i+GnE=",
       "Microsoft.AspNetCore.Components.Web.dll": "sha256-VvSYXBSgSO6kaaA9WbTk46RCn6N3kf57G9cL4EXjkEo=",
       "Microsoft.AspNetCore.Components.WebAssembly.dll": "sha256-eD\/Ejz9FCgsgOTynSoaQuTLZwWuCETzLO3ZuqG8Os4c=",
