@@ -1,9 +1,10 @@
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using AKarateFelgueiras;
 using MudBlazor.Services;
 
-internal class Program
+namespace AKarateFelgueiras;
+
+internal static class Program
 {
     private static async Task Main(string[] args)
     {
