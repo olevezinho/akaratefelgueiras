@@ -4,7 +4,7 @@ using MudBlazor.Services;
 
 namespace AKarateFelgueiras;
 
-internal sealed class Program
+internal static class Program
 {
     private static async Task Main(string[] args)
     {
