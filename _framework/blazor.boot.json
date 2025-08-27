@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "AKarateFelgueiras",
   "resources": {
-    "hash": "sha256-ptMMFoqwnVoctoipre6EOCpFFsXX4y6ja9E0zOXPrj0=",
+    "hash": "sha256-HOLDUdSuNRponum8lUpy4TL6Byi1bqttf1pYtK0oryo=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.45ykigla5r.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "AKarateFelgueiras.wasm": "sha256-QWDTGket5OpzhzPh6TdqNkTDxF6umKTccbsJwcgNOGM=",
+      "AKarateFelgueiras.wasm": "sha256-rsFOK4yK/egvHXbQ0z6En5qFnS204GEUWLEbjJkEAk8=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-8xttSI9ZBqSrsIacOkFAK9u0F/kHckIWWuFN9E4oFww=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-zVtAN6++s/wr/V+rxV/RQKbq+YZCaaXXy6tVo20300I=",
       "Microsoft.AspNetCore.Components.WebAssembly.wasm": "sha256-0Za6xSc4m/AZZ0cHcT2sbleznrkmEE2Mkyo1CL/J/tM=",
