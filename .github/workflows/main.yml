@@ -19,9 +19,11 @@ jobs:
       with:
         dotnet-version: 8.0.100
 
-    # installs python3
+    # sets up python3
     - name: installs python3
-      run: apt-get update && apt-get install -y python3
+      uses: actions/setup-python@v5
+      with:
+        python-version: '3.13' 
 
     # restores blazor wasm workloads
     - name: Restore WASM workloads
