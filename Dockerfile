@@ -3,8 +3,7 @@ WORKDIR /src
 COPY AKarateFelgueiras.csproj .
 
 RUN apt-get update
-RUN apt-get install -y python3
-RUN apt-get install ca-certificates curl gnupg -yq
+RUN apt-get --no-install-recommends install -y python3
 
 RUN dotnet workload install wasm-tools-net8
 RUN dotnet restore AKarateFelgueiras.csproj
