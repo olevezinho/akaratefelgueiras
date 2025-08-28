@@ -19,6 +19,14 @@ jobs:
       with:
         dotnet-version: 8.0.100
 
+    # installs python3
+    - name: installs python3
+      run: apt-get update && apt-get install -y python3
+
+    # restores blazor wasm workloads
+    - name: Restore WASM workloads
+      run: dotnet workload install wasm-tools-net8
+
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core project
       run: dotnet publish -c Release -o release --nologo
