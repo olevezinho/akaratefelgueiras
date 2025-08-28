@@ -27,7 +27,7 @@ jobs:
 
     # restores blazor wasm workloads
     - name: Restore WASM workloads
-      run: dotnet workload install wasm-tools-net8
+      run: dotnet workload install wasm-tools
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core project
