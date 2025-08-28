@@ -1,9 +1,16 @@
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
 COPY AKarateFelgueiras.csproj .
+
+RUN apt-get update
+RUN apt-get install -y python3
+RUN apt-get install ca-certificates curl gnupg -yq
+
+RUN dotnet workload install wasm-tools-net8
 RUN dotnet restore AKarateFelgueiras.csproj
 COPY . .
-RUN dotnet build AKarateFelgueiras.csproj -c Release -o /app/build
+
+RUN dotnet build AKarateFelgueiras.csproj --no-restore -c Release -o /app/build
 
 FROM build AS publish
 RUN dotnet publish AKarateFelgueiras.csproj -c Release -o /app/publish
