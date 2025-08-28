@@ -20,14 +20,14 @@ jobs:
         dotnet-version: 8.0.100
 
     # sets up python3
-    - name: installs python3
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.13' 
+    # - name: installs python3
+    #   uses: actions/setup-python@v5
+    #   with:
+    #     python-version: '3.13' 
 
     # restores blazor wasm workloads
-    - name: Restore WASM workloads
-      run: dotnet workload install wasm-tools
+    # - name: Restore WASM workloads
+    #   run: dotnet workload install wasm-tools
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core project
