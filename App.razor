@@ -1,4 +1,6 @@
-﻿<Router AppAssembly="@typeof(App).Assembly">
+﻿@implements IDisposable
+
+<Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
         <RouteView RouteData="@routeData" DefaultLayout="@typeof(CustomLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
@@ -10,3 +12,26 @@
         </LayoutView>
     </NotFound>
 </Router>
+
+@code {
+    protected override void OnInitialized()
+    {
+        // Subscribe to the location changed event
+        NavigationManager.LocationChanged += OnLocationChanged;
+    }
+
+    private async void OnLocationChanged(object? sender, LocationChangedEventArgs e)
+    {
+        // Send the new page path to Google Analytics
+        await JSRuntime.InvokeVoidAsync("gtag", "config", "G-NMK7DR1R5V", new 
+        { 
+            page_path = new Uri(e.Location).PathAndQuery 
+        });
+    }
+
+    public void Dispose()
+    {
+        // Unsubscribe to prevent memory leaks
+        NavigationManager.LocationChanged -= OnLocationChanged;
+    }
+}

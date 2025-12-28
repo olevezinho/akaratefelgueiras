@@ -1,11 +1,11 @@
-FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+FROM mcr.microsoft.com/dotnet/sdk:10.0 AS build
 WORKDIR /src
 COPY AKarateFelgueiras.csproj .
 
 RUN apt-get update
 RUN apt-get --no-install-recommends install -y python3
 
-RUN dotnet workload install wasm-tools-net8
+RUN dotnet workload install wasm-tools
 RUN dotnet restore AKarateFelgueiras.csproj
 COPY . .
 

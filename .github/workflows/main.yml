@@ -13,11 +13,11 @@ jobs:
     # uses GitHub's checkout action to checkout code from the main branch
     - uses: actions/checkout@v2
 
-    # sets up .NET Core SDK 8.0.100
+    # sets up .NET Core SDK 10.0.101
     - name: Setup .NET Core SDK
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 8.0.100
+        dotnet-version: 10.0.101
 
     # sets up python3
     - name: installs python3
@@ -27,7 +27,7 @@ jobs:
 
     # restores blazor wasm workloads
     - name: Restore WASM workloads
-      run: dotnet workload install wasm-tools-net8
+      run: dotnet workload install wasm-tools
 
     # publishes Blazor project to the release-folder
     - name: Publish .NET Core project
