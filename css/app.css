@@ -1,7 +1,11 @@
-@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
-
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+@media (max-width: 600px) {
+    html, body {
+        scroll-padding-top: 280px;
+    }
 }
 
 h1:focus {
@@ -67,48 +71,18 @@ a, .btn-link {
         content: "An error has occurred."
     }
 
-.loading-progress {
-    position: relative;
+/* Ecra de carregamento logo CSS */
+.loading-logo {
     display: block;
-    width: 8rem;
-    height: 8rem;
-    margin: 20vh auto 1rem auto;
+    margin: 20vh auto 0 auto;
+    max-width: 200px;
+    width: 50vw;
+    filter: drop-shadow(0 4px 24px rgba(0,0,0,0.25));
+    animation: fadeIn 1s ease;
 }
 
-.loading-progress-text {
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
-    .loading-text:after {
-        content: var(--blazor-load-percentage-text, "Loading");
-    }
-
-
-
-.nav-item {
-  text-align: left !important;
-  text-wrap: nowrap !important;
-  padding-top: 1%;
-  padding-left: 5%;
-  font-weight: bold;
-  inline-size: 100%;
-}
-
-.navbar-toggler {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 3%;
-  padding-left: 5%;
-  padding-right: 5%;
-  padding-top: 2%;
-  padding-bottom: 2%;
-  border: 0px !important;
-}
-
-.navbar-toggler-icon {
-  width: 8rem !important;
-  height: 8rem !important;
-}
