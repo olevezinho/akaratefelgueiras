@@ -1,0 +1,140 @@
+﻿<MudBreakpointProvider OnBreakpointChanged="OnBreakpointChanged">
+    <MudAppBar Style="@($"color: {Colors.BlueGray.Darken4}; background:{Colors.Gray.Lighten5}; position: sticky; top: 0; z-index: 1000;")" Fixed="false">
+        @if (IsMobile)
+        {
+            <div class="mx-auto">
+                <MudStack Spacing="2">
+                    <MudButton OnClick="OnMainMobileMenuExpandCollapseClick" Style="min-width: 96px; min-height: 96px; padding: 16px;">
+                        @if (_mainMobileMenuExpanded)
+                        {
+                            <MudIcon Icon="@(Icons.Material.Filled.Close)" Style="font-size: 4.5rem;" />
+                        }
+                        else
+                        {
+                            <MudIcon Icon="@(Icons.Material.Filled.Menu)" Style="font-size: 4.5rem;" />
+                        }
+                    </MudButton>
+                    <MudCollapse Expanded="_mainMobileMenuExpanded">
+                        <MudDivider />
+                        <MudNavLink Href="#missao-valores"
+                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Missão e valores
+                        </MudNavLink>
+                        <MudNavLink Href="#a-historia"
+                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            História
+                        </MudNavLink>
+                        <MudNavLink Href="#horarios-locais"
+                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Horários & Locais
+                        </MudNavLink>
+                        <MudNavLink Href="#saiba-mais"
+                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Saiba mais
+                        </MudNavLink>
+                        <MudNavLink Href="#parceiros"
+                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Parceiros
+                        </MudNavLink>
+                        <MudNavLink Href="#contacto"
+                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Contacto
+                        </MudNavLink>
+                        <MudDivider />
+                        <MudButton OnClick="OnMobileBlogMenuExpandCollapseClick" Style="min-width: 56px; min-height: 56px; padding: 12px;">
+                            @if (_mobileBlogMenuExpanded)
+                            {
+                                <MudText Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">Blogue</MudText>
+                                <MudIcon Icon="@(Icons.Material.Filled.ExpandLess)" Style="font-size: 2.2rem;" />
+                            }
+                            else
+                            {
+                                <MudText Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">Blogue</MudText>
+                                <MudIcon Icon="@(Icons.Material.Filled.ExpandMore)" Style="font-size: 2.2rem;" />
+                            }
+                        </MudButton>
+                        <MudCollapse Expanded="_mobileBlogMenuExpanded">
+                            <MudDivider />
+                            <MudNavLink 
+                                Href="https://akaratefelgueiras.medium.com/a-pr%C3%B3xima-%C3%A9poca-desportiva-est%C3%A1-a%C3%AD-8b614e5755c1?source=friends_link&sk=994a9a94ca318c9043e678dc6812675b"
+                                Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                                Época 25/26
+                            </MudNavLink>
+                            <MudNavLink 
+                                Href="https://akaratefelgueiras.medium.com/karat%C3%A9-kids-fde090c4da29"
+                                Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                                Karaté Kids
+                            </MudNavLink>
+                        </MudCollapse>
+                    </MudCollapse>
+                </MudStack>
+            </div>
+        }
+        else
+        {
+            <MudMenu Variant="Variant.Text" Size="Size.Medium" Icon="@Icons.Material.Filled.Menu">
+                <MudMenu Dense StartIcon="@Icons.Material.Filled.TextSnippet" Color="Color.Dark" Label="Blogue"
+                    Style="@($"font-size: 1.35rem; font-weight: 450; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                    <MudMenuItem
+                        Href="https://akaratefelgueiras.medium.com/a-pr%C3%B3xima-%C3%A9poca-desportiva-est%C3%A1-a%C3%AD-8b614e5755c1?source=friends_link&sk=994a9a94ca318c9043e678dc6812675b"
+                        Icon="@Icons.Material.Filled.SportsMartialArts" IconColor="Color.Inherit" Label="Época 25/26"
+                        Style="@($"font-size: 1.10rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")" />
+
+                    <MudDivider />
+
+                    <MudMenuItem Href="https://akaratefelgueiras.medium.com/karat%C3%A9-kids-fde090c4da29"
+                        Icon="@Icons.Material.Filled.ChildCare" IconColor="Color.Inherit" Label="Karaté Kids"
+                        Style="@($"font-size: 1.10rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")" />
+                </MudMenu>
+            </MudMenu>
+            <MudNavLink Href="#missao-valores"
+                Style="@($"font-size: 1.45rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                Missão e valores
+            </MudNavLink>
+            <MudNavLink Href="#a-historia"
+                Style="@($"font-size: 1.45rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                História
+            </MudNavLink>
+            <MudNavLink Href="#horarios-locais"
+                Style="@($"font-size: 1.45rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                Horários & Locais
+            </MudNavLink>
+            <MudNavLink Href="#saiba-mais"
+                Style="@($"font-size: 1.45rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                Saiba mais
+            </MudNavLink>
+            <MudNavLink Href="#parceiros"
+                Style="@($"font-size: 1.45rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                Parceiros
+            </MudNavLink>
+            <MudNavLink Href="#contacto"
+                Style="@($"font-size: 1.45rem; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                Contacto
+            </MudNavLink>
+        }
+    </MudAppBar>
+</MudBreakpointProvider>
+
+@code
+{
+    private MudBlazor.Breakpoint _currentBreakpoint;
+    private bool _mainMobileMenuExpanded = false;
+    private bool _mobileBlogMenuExpanded = false;
+    private bool IsMobile => _currentBreakpoint < MudBlazor.Breakpoint.Sm;
+
+    private void OnBreakpointChanged(MudBlazor.Breakpoint breakpoint)
+    {
+        _currentBreakpoint = breakpoint;
+        StateHasChanged();
+    }
+
+    private void OnMainMobileMenuExpandCollapseClick()
+    {
+        _mainMobileMenuExpanded = !_mainMobileMenuExpanded;
+    }
+
+    private void OnMobileBlogMenuExpandCollapseClick()
+    {
+        _mobileBlogMenuExpanded = !_mobileBlogMenuExpanded;
+    }
+}
