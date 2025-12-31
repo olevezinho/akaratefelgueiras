@@ -2,6 +2,12 @@ html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+@media (max-width: 600px) {
+    html, body {
+        scroll-padding-top: 280px;
+    }
+}
+
 h1:focus {
     outline: none;
 }
