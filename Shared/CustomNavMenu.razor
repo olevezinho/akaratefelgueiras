@@ -3,66 +3,66 @@
         @if (IsMobile)
         {
             <div class="mx-auto">
-                <MudStack Spacing="2">
-                    <MudButton OnClick="OnMainMobileMenuExpandCollapseClick" Style="min-width: 96px; min-height: 96px; padding: 16px;">
+                <MudStack>
+                    <MudButton OnClick="OnMainMobileMenuExpandCollapseClick" Style="min-width: 72px; min-height: 72px;">
                         @if (_mainMobileMenuExpanded)
                         {
-                            <MudIcon Icon="@(Icons.Material.Filled.Close)" Style="font-size: 4.5rem;" />
+                            <MudIcon Icon="@(Icons.Material.Filled.Close)" Style="font-size: 9rem;" />
                         }
                         else
                         {
-                            <MudIcon Icon="@(Icons.Material.Filled.Menu)" Style="font-size: 4.5rem;" />
+                            <MudIcon Icon="@(Icons.Material.Filled.Menu)" Style="font-size: 9rem;" />
                         }
                     </MudButton>
                     <MudCollapse Expanded="_mainMobileMenuExpanded">
-                        <MudDivider />
+                        <MudDivider Style="margin: 0.25rem 0;" />
                         <MudNavLink Href="#missao-valores"
-                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Style="@($"font-size: 3.5rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                             Missão e valores
                         </MudNavLink>
                         <MudNavLink Href="#a-historia"
-                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Style="@($"font-size: 3.5rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                             História
                         </MudNavLink>
                         <MudNavLink Href="#horarios-locais"
-                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Style="@($"font-size: 3.5rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                             Horários & Locais
                         </MudNavLink>
                         <MudNavLink Href="#saiba-mais"
-                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Style="@($"font-size: 3.5rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                             Saiba mais
                         </MudNavLink>
                         <MudNavLink Href="#parceiros"
-                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Style="@($"font-size: 3.5rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                             Parceiros
                         </MudNavLink>
                         <MudNavLink Href="#contacto"
-                            Style="@($"font-size: 1.75rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                            Style="@($"font-size: 3.5rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                             Contacto
                         </MudNavLink>
-                        <MudDivider />
-                        <MudButton OnClick="OnMobileBlogMenuExpandCollapseClick" Style="min-width: 56px; min-height: 56px; padding: 12px;">
+                        <MudDivider Style="margin: 0.25rem 0;" />
+                        <MudButton OnClick="OnMobileBlogMenuExpandCollapseClick" Style="min-width: 50px; min-height: 50;">
                             @if (_mobileBlogMenuExpanded)
                             {
-                                <MudText Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">Blogue</MudText>
-                                <MudIcon Icon="@(Icons.Material.Filled.ExpandLess)" Style="font-size: 2.2rem;" />
+                                <MudText Style="@($"font-size: 3.1rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">Blogue</MudText>
+                                <MudIcon Icon="@(Icons.Material.Filled.ExpandLess)" Style="font-size: 4.4rem;" />
                             }
                             else
                             {
-                                <MudText Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">Blogue</MudText>
-                                <MudIcon Icon="@(Icons.Material.Filled.ExpandMore)" Style="font-size: 2.2rem;" />
+                                <MudText Style="@($"font-size: 3.1rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">Blogue</MudText>
+                                <MudIcon Icon="@(Icons.Material.Filled.ExpandMore)" Style="font-size: 4.4rem;" />
                             }
                         </MudButton>
                         <MudCollapse Expanded="_mobileBlogMenuExpanded">
-                            <MudDivider />
+                            <MudDivider Style="margin: 0.25rem 0;" />
                             <MudNavLink 
                                 Href="https://akaratefelgueiras.medium.com/a-pr%C3%B3xima-%C3%A9poca-desportiva-est%C3%A1-a%C3%AD-8b614e5755c1?source=friends_link&sk=994a9a94ca318c9043e678dc6812675b"
-                                Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                                Style="@($"font-size: 3.1rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                                 Época 25/26
                             </MudNavLink>
                             <MudNavLink 
                                 Href="https://akaratefelgueiras.medium.com/karat%C3%A9-kids-fde090c4da29"
-                                Style="@($"font-size: 1.55rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
+                                Style="@($"font-size: 3.1rem; font-weight: 700; align-items: center; color: {Colors.BlueGray.Darken4}; width: 100%; display: flex;")">
                                 Karaté Kids
                             </MudNavLink>
                         </MudCollapse>
