@@ -6517,20 +6517,7 @@
               </div>
             </div>
             <div id="VR9cS8aDBkRfIXNQ" style="display:grid;position:relative;grid-area:3 / 3 / 4 / 4;">
-              <div id="tL9TlX3U7drFip9L" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">
-                <div id="wt8nvYzAiR4jMDag" style="z-index:4;">
-                  <div id="LDp4HEGGKO43j9Cj" style="padding-top:28.39061486%;transform:rotate(0deg);">
-                    <div id="lXPfbuPLqQD4OOOb" style="top:0px;left:0px;width:100%;position:absolute;height:100%;"><svg
-                        id="E5JzsZWNR0uu54Kz" viewBox="0 0 50.5307 14.346"
-                        style="overflow:hidden;top:0%;left:0%;background:url('');width:100%;position:absolute;opacity:1.0;height:100%;">
-                        <g id="ZxBuC372gRHwSveR" style="transform:scale(1, 1);">
-                          <path id="yToChs8LUwrYlrP8"
-                            d="M0.0,0.0 L50.530700274296976,0.0 L50.530700274296976,14.345976498586964 L0.0,14.345976498586964 L0.0,0.0"
-                            style="fill:#e30417;opacity:1.0;"></path>
-                        </g>
-                      </svg></div>
-                  </div>
-                </div>
+              <div id="tL9TlX3U7drFip9L" style="display:grid;position:relative;grid-area:2 / 2 / 3 / 3;">                
                 <div id="CMltqeRlPCTCEMvE" style="z-index:5;">
                   <div id="ElTqXWAiFpWV9t1y"
                     style="transform:rotate(0deg);width:100%;box-sizing:border-box;height:100%;">
@@ -6538,7 +6525,8 @@
                       style="flex-direction:column;display:flex;width:100%;justify-content:center;opacity:1.0;box-sizing:border-box;height:100%;">
                       <p id="ExFdrJsAGKmUoSds"
                         style="text-transform:uppercase;color:#27324a;letter-spacing:0em;font-family:system-ui;line-height:1.39283973em;text-align:center;">
-                        <MudButton id="wPk5yWa34mIxvyUB" Href="mailto:akfelgueiras@gmail.com" style="color:#ffffff;font-weight:700;font-family:system-ui;" >Fale Connosco</MudButton><br></p>
+                        <MudButton Variant="Variant.Filled" OnClick="DownloadScheduleAsync" style="color:#ffffff; background-color: #e30417; font-weight:700; font-family: system-ui;" >Transferir Horários</MudButton><br>
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -7083,3 +7071,15 @@
     </section>
   </div>
 </body>
+
+@code 
+{
+    private async Task DownloadScheduleAsync()
+    {
+        // Generate a file
+        var fileUrl = "akaratefelgueiras/horarios.pdf";
+
+        // Send the data to JS to actually download the file
+        await JSRuntime.InvokeVoidAsync("downloadFile", fileUrl);
+    }
+}
