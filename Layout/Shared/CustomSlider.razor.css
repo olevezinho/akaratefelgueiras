@@ -1,0 +1,117 @@
+.carousel {
+  position: relative;
+  height: 100vh;
+}
+
+.carousel .carousel-item {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.carousel-mobile {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.slider-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+::deep .slider-image,
+::deep .slider-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+::deep .slider-image-mobile,
+::deep .slider-image-mobile img {
+  width: auto;
+  height: 100vh;
+  max-width: none;
+  object-position: 50% 18%;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  z-index: 1;
+}
+
+.title-overlay {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.temple-logo {
+  position: absolute;
+  top: 7vh;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(120px, 13vw, 220px);
+  height: auto;
+  z-index: 2;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.45));
+}
+
+.tilted-title-scene {
+  position: absolute;
+  left: 50%;
+  bottom: 14vh;
+  width: min(92vw, 980px);
+  height: auto;
+  transform: translateX(-50%) perspective(600px) rotateX(45deg);
+  transform-origin: 50% 100%;
+}
+
+.tilted-title-text {
+  margin: 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: clamp(1.2rem, 2.2vw, 2.4rem);
+  font-weight: 700;
+  line-height: 1.45;
+  letter-spacing: 0.12em;
+  text-shadow:
+    0 0 6px rgba(255, 255, 255, 0.45),
+    0 0 18px rgba(255, 255, 255, 0.26),
+    0 16px 28px rgba(0, 0, 0, 0.65);
+}
+
+@media (max-width: 900px) {
+  .temple-logo {
+    top: 5vh;
+    width: clamp(96px, 22vw, 150px);
+  }
+
+  .tilted-title-scene {
+    bottom: 10vh;
+    width: min(96vw, 560px);
+    transform: translateX(-50%) perspective(500px) rotateX(32deg);
+  }
+
+  .tilted-title-text {
+    letter-spacing: 0.08em;
+    line-height: 1.35;
+  }
+}

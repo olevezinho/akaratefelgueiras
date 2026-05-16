@@ -1,13 +1,27 @@
 ﻿<MudBreakpointProvider OnBreakpointChanged="OnBreakpointChanged">
     <MudToolBar Style="position: sticky; top: 0; width: 100%; z-index: 999999; background-color: white;">
-        <MudImage 
-            @onclick="@(() => Navigation.NavigateTo("/"))" 
-            Src="/images/akf-logo.webp" 
-            Alt="HC Dental Clinic logótipo" 
-            Height="70" />
-        <MudSpacer />
         @if(IsMobile || IsSmallTablet)
         {
+            <MudMenu 
+                Icon="@Icons.Material.Filled.MoreVert"
+                Variant="Variant.Text" 
+                @onmouseover="OnMouseOverTextNoticiasColorChange"
+                @onmouseout="OnMouseOutTextNoticiasColorChange"
+                Style="@($"color: {mudNoticiasTextColor}; transition: color 0.3s;")">
+                <MudMenuItem 
+                    Label="Item 1" 
+                    @onmouseover="OnMouseOverTextPrimeiraNoticiaColorChange"
+                    @onmouseout="OnMouseOutTextPrimeiraNoticiaColorChange"/>
+                <MudMenuItem 
+                    Label="Item 2" 
+                    @onmouseover="OnMouseOverTextSegundaNoticiaColorChange"
+                    @onmouseout="OnMouseOutTextSegundaNoticiaColorChange"/>
+                <MudMenuItem 
+                    Label="Item 3" 
+                    @onmouseover="OnMouseOverTextTerceiraNoticiaColorChange"
+                    @onmouseout="OnMouseOutTextTerceiraNoticiaColorChange"/>
+            </MudMenu>
+            <MudSpacer />
             <MudButton 
                 Class="mr-5"
                 Variant="Variant.Filled"
@@ -16,12 +30,39 @@
                 @onmouseout="OnMouseOutContactoChange"
                 OnClick="@(async () => await ScrollToSection("contact-form"))"
                 Style="@($"color: white; background-color: {mudButtonBackgroundColor}; border-radius: 16px; font-size: 1rem;")">
-                Missão
+                Contacto
             </MudButton>
         }
         else
         {
-            <MudButton 
+                @* @onclick="@(async () => await ScrollToSection("noticias"))" *@
+            <MudImage 
+                @onclick="@(() => Navigation.NavigateTo("/"))" 
+                Src="/images/akf-logo.webp" 
+                Alt="HC Dental Clinic logótipo" 
+                Height="70" />
+            <MudSpacer />
+            <MudMenu 
+                Label="Notícias" 
+                Variant="Variant.Text" 
+                EndIcon="@Icons.Material.Filled.KeyboardArrowDown"
+                @onmouseover="OnMouseOverTextNoticiasColorChange"
+                @onmouseout="OnMouseOutTextNoticiasColorChange"
+                Style="@($"color: {mudNoticiasTextColor}; transition: color 0.3s;")">
+                <MudMenuItem 
+                    Label="Item 1" 
+                    @onmouseover="OnMouseOverTextPrimeiraNoticiaColorChange"
+                    @onmouseout="OnMouseOutTextPrimeiraNoticiaColorChange"/>
+                <MudMenuItem 
+                    Label="Item 2" 
+                    @onmouseover="OnMouseOverTextSegundaNoticiaColorChange"
+                    @onmouseout="OnMouseOutTextSegundaNoticiaColorChange"/>
+                <MudMenuItem 
+                    Label="Item 3" 
+                    @onmouseover="OnMouseOverTextTerceiraNoticiaColorChange"
+                    @onmouseout="OnMouseOutTextTerceiraNoticiaColorChange"/>
+            </MudMenu>
+            @* <MudButton 
                 Class="mr-5"
                 Variant="Variant.Text"
                 Href="#services"
@@ -30,7 +71,7 @@
                 OnClick="@(async () => await ScrollToSection("noticias"))"
                 Style="@($"color: {mudNoticiasTextColor}; transition: color 0.3s;")">
                 Notícias
-            </MudButton>
+            </MudButton> *@
             <MudButton 
                 Class="mr-5"
                 Variant="Variant.Text"
@@ -91,7 +132,6 @@
                 Style="@($"color: {mudAfiliacoesTextColor}; transition: color 0.3s;")">
                 Afiliações
             </MudButton>
-            @* TODO: Adicionar botão para hc-mini *@
             <MudButton 
                 Class="mr-5"
                 Variant="Variant.Filled"
@@ -116,6 +156,9 @@
     private string mudMissaoTextColor = Colors.BlueGray.Darken4;
     private string mudInstrutoresTextColor = Colors.BlueGray.Darken4;
     private string mudNoticiasTextColor = Colors.BlueGray.Darken4;
+    private string mudPrimeiraNoticiaTextColor = Colors.BlueGray.Darken4;
+    private string mudSegundaNoticiaTextColor = Colors.BlueGray.Darken4;
+    private string mudTerceiraNoticiaTextColor = Colors.BlueGray.Darken4;
     private string mudValoresTextColor = Colors.BlueGray.Darken4;
     private string mudHistoriaTextColor = Colors.BlueGray.Darken4;
     private string mudHorariosTextColor = Colors.BlueGray.Darken4;
@@ -162,6 +205,36 @@
     private void OnMouseOutTextNoticiasColorChange(MouseEventArgs args)
     {
         mudNoticiasTextColor = Colors.BlueGray.Darken4;
+    }
+
+    private void OnMouseOverTextPrimeiraNoticiaColorChange(MouseEventArgs args)
+    {
+        mudPrimeiraNoticiaTextColor = Colors.Red.Accent4;
+    }
+
+    private void OnMouseOutTextPrimeiraNoticiaColorChange(MouseEventArgs args)
+    {
+        mudPrimeiraNoticiaTextColor = Colors.BlueGray.Darken4;
+    }
+
+    private void OnMouseOverTextSegundaNoticiaColorChange(MouseEventArgs args)
+    {
+        mudSegundaNoticiaTextColor = Colors.Red.Accent4;
+    }
+
+    private void OnMouseOutTextSegundaNoticiaColorChange(MouseEventArgs args)
+    {
+        mudSegundaNoticiaTextColor = Colors.BlueGray.Darken4;
+    }
+
+    private void OnMouseOverTextTerceiraNoticiaColorChange(MouseEventArgs args)
+    {
+        mudTerceiraNoticiaTextColor = Colors.Red.Accent4;
+    }
+
+    private void OnMouseOutTextTerceiraNoticiaColorChange(MouseEventArgs args)
+    {
+        mudTerceiraNoticiaTextColor = Colors.BlueGray.Darken4;
     }
 
     private void OnMouseOverTextInstrutoresColorChange(MouseEventArgs args)

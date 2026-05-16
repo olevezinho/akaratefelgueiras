@@ -1,0 +1,110 @@
+<MudBreakpointProvider OnBreakpointChanged="OnBreakpointChanged">
+    @if(IsMobile)
+    {
+        <div class="carousel-mobile">
+            <div class="slider-image-container">
+                <MudImage Class="mx-auto my-auto slider-image slider-image-mobile" 
+                    Src="images/background.webp"
+                    Style="display: block;"
+                    Alt="HC Dental Clinic Background Slider" />
+            </div>
+            <div class="overlay title-overlay">
+                <img class="temple-logo" src="images/akf-logo.webp" alt="AKF Logo" />
+                <div class="tilted-title-scene" aria-label="Nome do clube">
+                    <p class="tilted-title-text">
+                        Associação de Karaté de Felgueiras<br />Karaté-do Shotokan
+                    </p>
+                </div>
+            </div>
+        </div>
+    }
+    else
+    {
+        <MudCarousel 
+            Class="mud-width-full" 
+            Style="height: 100vh;" 
+            AutoCycle="false" 
+            ShowBullets="false" 
+            TData="object">
+            <ChildContent>
+                <MudCarouselItem Color="@Color.Inherit" Transition="Transition.Fade">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <div class="slider-image-container">
+                                <MudImage Class="mx-auto my-auto slider-image" 
+                                    Src="images/background.webp"
+                                    Style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; display: block;"
+                                    Alt="AKF Slider" />
+                            </div>
+                            <div class="overlay title-overlay">
+                                <img class="temple-logo" src="images/akf-logo.webp" alt="AKF Logo" />
+                                <div class="tilted-title-scene" aria-label="Nome do clube">
+                                    <p class="tilted-title-text">
+                                        Associação de Karaté de Felgueiras<br />Karaté-do Shotokan
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </MudCarouselItem>
+                <MudCarouselItem 
+                    Color="@Color.Inherit" 
+                    Transition="Transition.Fade">
+                    <div class="carousel">
+                        <div class="carousel-item">
+                            <div class="slider-image-container">
+                            @* For mobile, this will have to be adjusted to fit better. *@
+                            @* <div class="d-flex" style="display: flex; justify-content: center; align-items: center; position: ; top: 0; left: 0; right: 0; bottom: 0; z-index: -1;"> *@
+                                <MudImage Class="mx-auto my-auto slider-image" 
+                                    Src="images/background.webp"
+                                    Style="width: 100%; height: 100%; object-fit: cover; object-position: 50% 18%; display: block;"
+                                    Alt="HC Dental Clinic Background Slider" />
+                            </div>
+                            @* <div class="overlay">
+                                <MudGrid>
+                                    <MudItem xs="12">
+                                        <MudText Class="pa-4"
+                                            Style="@($"margin-top: 15%; text-align: center;color: {Colors.Gray.Lighten5}; font-weight: normal; z-index: 2; font-size: 1.2rem;")">
+                                            O seu sorriso é a nossa prioridade.
+                                        </MudText>
+                                    </MudItem>
+                                    <MudItem xs="12">
+                                        <MudText Class="pa-4"
+                                            Style="@($"text-align: center;color: {Colors.Gray.Lighten5}; font-weight: normal; z-index: 2; font-size: 1.4rem;")">
+                                            Cuidados dentários de qualidade para toda a família num<br />ambiente acolhedor
+                                        </MudText>
+                                    </MudItem>
+                                </MudGrid>    
+                                <MudButton 
+                                    Class="pa-4"
+                                    Variant="Variant.Filled"
+                                    EndIcon="@Icons.Material.Filled.ArrowDownward"
+                                    IconSize="Size.Small"
+                                    Href="#mission"
+                                    @onmouseover="OnMouseOverColorChange"
+                                    @onmouseout="OnMouseOutColorChange"
+                                    Style="@($"position: absolute; margin-top: 3%; left: 50%; transform: translate(-50%, -50%); min-width: 9%; display: flex; justify-content: center; align-items: center; color: {mudButtonTextColor}; background-color: white; border-radius: 50px; z-index: 2;")">
+                                    Saiba mais
+                                </MudButton>        
+                            </div> *@
+                        </div>
+                    </div>
+                </MudCarouselItem>
+            </ChildContent>
+        </MudCarousel>
+    }
+    
+</MudBreakpointProvider>
+
+@code
+{
+    private MudBlazor.Breakpoint _currentBreakpoint;
+    private bool IsMobile => _currentBreakpoint < MudBlazor.Breakpoint.Sm;
+
+    private void OnBreakpointChanged(MudBlazor.Breakpoint breakpoint)
+    {
+        _currentBreakpoint = breakpoint;
+        StateHasChanged();
+    }
+
+}
