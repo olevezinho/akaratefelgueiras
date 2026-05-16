@@ -2,12 +2,16 @@
 
 <Router AppAssembly="@typeof(App).Assembly">
     <Found Context="routeData">
-        <RouteView RouteData="@routeData" DefaultLayout="@typeof(CustomLayout)" />
+        @* <RouteView RouteData="@routeData" DefaultLayout="@typeof(CustomLayout)" /> *@
+        <RouteView RouteData="@routeData" DefaultLayout="@typeof(CustomAKFLayout)" />
         <FocusOnNavigate RouteData="@routeData" Selector="h1" />
     </Found>
     <NotFound>
         <PageTitle>Not found</PageTitle>
-        <LayoutView Layout="@typeof(CustomLayout)">
+        @* <LayoutView Layout="@typeof(CustomLayout)">
+            <p role="alert">Pedimos desculpa, mas não há nada neste endereço.</p>
+        </LayoutView> *@
+        <LayoutView Layout="@typeof(CustomAKFLayout)">
             <p role="alert">Pedimos desculpa, mas não há nada neste endereço.</p>
         </LayoutView>
     </NotFound>
@@ -17,7 +21,7 @@
     protected override void OnInitialized()
     {
         // Subscribe to the location changed event
-        NavigationManager.LocationChanged += OnLocationChanged;
+        Navigation.LocationChanged += OnLocationChanged;
     }
 
     private async void OnLocationChanged(object? sender, LocationChangedEventArgs e)
@@ -32,6 +36,6 @@
     public void Dispose()
     {
         // Unsubscribe to prevent memory leaks
-        NavigationManager.LocationChanged -= OnLocationChanged;
+        Navigation.LocationChanged -= OnLocationChanged;
     }
 }
